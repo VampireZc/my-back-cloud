@@ -1,0 +1,16 @@
+/Users/zc/my/study/hmall/trade-service/src/main/java/com/zc/trade/domain/po/OrderLogistics.java
+/Users/zc/my/study/hmall/trade-service/src/main/java/com/zc/trade/domain/po/OrderDetail.java
+/Users/zc/my/study/hmall/trade-service/src/main/java/com/zc/trade/tradeApplication.java
+/Users/zc/my/study/hmall/trade-service/src/main/java/com/zc/trade/domain/po/Order.java
+/Users/zc/my/study/hmall/trade-service/src/main/java/com/zc/trade/mapper/OrderMapper.java
+/Users/zc/my/study/hmall/trade-service/src/main/java/com/zc/trade/controller/OrderController.java
+/Users/zc/my/study/hmall/trade-service/src/main/java/com/zc/trade/service/Impl/OrderDetailServiceImpl.java
+/Users/zc/my/study/hmall/trade-service/src/main/java/com/zc/trade/domain/vo/OrderVO.java
+/Users/zc/my/study/hmall/trade-service/src/main/java/com/zc/trade/service/IOrderService.java
+/Users/zc/my/study/hmall/trade-service/src/main/java/com/zc/trade/service/Impl/OrderLogisticsServiceImpl.java
+/Users/zc/my/study/hmall/trade-service/src/main/java/com/zc/trade/service/IOrderDetailService.java
+/Users/zc/my/study/hmall/trade-service/src/main/java/com/zc/trade/service/Impl/OrderServiceImpl.java
+/Users/zc/my/study/hmall/trade-service/src/main/java/com/zc/trade/mapper/OrderLogisticsMapper.java
+/Users/zc/my/study/hmall/trade-service/src/main/java/com/zc/trade/mapper/OrderDetailMapper.java
+/Users/zc/my/study/hmall/trade-service/src/main/java/com/zc/trade/service/IOrderLogisticsService.java
+/Users/zc/my/study/hmall/trade-service/src/main/java/com/zc/trade/domain/dto/OrderFormDTO.java

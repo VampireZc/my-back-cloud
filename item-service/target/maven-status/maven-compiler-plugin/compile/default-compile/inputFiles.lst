@@ -1,0 +1,9 @@
+/Users/zc/my/study/hmall/item-service/src/main/java/com/zc/item/controller/ItemController.java
+/Users/zc/my/study/hmall/item-service/src/main/java/com/zc/item/domain/dto/OrderDetailDTO.java
+/Users/zc/my/study/hmall/item-service/src/main/java/com/zc/item/itemApplication.java
+/Users/zc/my/study/hmall/item-service/src/main/java/com/zc/item/domain/query/ItemPageQuery.java
+/Users/zc/my/study/hmall/item-service/src/main/java/com/zc/item/service/impl/ItemServiceImpl.java
+/Users/zc/my/study/hmall/item-service/src/main/java/com/zc/item/service/IItemService.java
+/Users/zc/my/study/hmall/item-service/src/main/java/com/zc/item/domain/dto/ItemDTO.java
+/Users/zc/my/study/hmall/item-service/src/main/java/com/zc/item/mapper/ItemMapper.java
+/Users/zc/my/study/hmall/item-service/src/main/java/com/zc/item/domain/po/Item.java

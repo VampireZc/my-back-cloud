@@ -1,0 +1,24 @@
+00:50:12:393  INFO 18846 --- [main] com.zc.pay.payApplication                : Starting payApplication using Java 17.0.21.0.2 on zcdeMacBook-Pro.local with PID 18846 (/Users/zc/my/study/hmall/pay-service/target/classes started by zc in /Users/zc/my/study/hmall)
+00:50:12:394 DEBUG 18846 --- [main] com.zc.pay.payApplication                : Running with Spring Boot v2.7.12, Spring v5.3.27
+00:50:12:394  INFO 18846 --- [main] com.zc.pay.payApplication                : The following 1 profile is active: "dev"
+00:50:12:678  INFO 18846 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=de95df94-b20d-3cd0-8615-ec575837311a
+00:50:12:806  INFO 18846 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8097 (http)
+00:50:12:809  INFO 18846 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+00:50:12:809  INFO 18846 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+00:50:12:841  INFO 18846 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+00:50:12:841  INFO 18846 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 431 ms
+00:50:12:897  INFO 18846 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'user-service' URL not provided. Will try picking an instance via load-balancing.
+00:50:12:913  INFO 18846 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'trade-service' URL not provided. Will try picking an instance via load-balancing.
+00:50:13:125  INFO 18846 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+00:50:13:196  INFO 18846 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+00:50:13:197  INFO 18846 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+00:50:13:379  INFO 18846 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+00:50:13:380  INFO 18846 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+00:50:13:380  INFO 18846 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+00:50:13:380  INFO 18846 --- [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+00:50:13:410  INFO 18846 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8097 (http) with context path '/api'
+00:50:13:416  INFO 18846 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP pay-service 192.168.31.202:8097 register finished
+00:50:13:419  INFO 18846 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+00:50:13:420  INFO 18846 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+00:50:13:425  INFO 18846 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+00:50:13:445  INFO 18846 --- [main] com.zc.pay.payApplication                : Started payApplication in 1.223 seconds (JVM running for 1.388)
