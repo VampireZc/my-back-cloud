@@ -12,7 +12,9 @@
 /Users/zc/my/study/hmall/hm-common/src/main/java/com/hmall/common/advice/CommonExceptionAdvice.java
 /Users/zc/my/study/hmall/hm-common/src/main/java/com/hmall/common/exception/DbException.java
 /Users/zc/my/study/hmall/hm-common/src/main/java/com/hmall/common/utils/CookieBuilder.java
+/Users/zc/my/study/hmall/hm-common/src/main/java/com/hmall/common/Interceptors/Interceptors.java
 /Users/zc/my/study/hmall/hm-common/src/main/java/com/hmall/common/domain/PageDTO.java
 /Users/zc/my/study/hmall/hm-common/src/main/java/com/hmall/common/domain/R.java
 /Users/zc/my/study/hmall/hm-common/src/main/java/com/hmall/common/utils/CollUtils.java
+/Users/zc/my/study/hmall/hm-common/src/main/java/com/hmall/common/config/MyInterceptorConfig.java
 /Users/zc/my/study/hmall/hm-common/src/main/java/com/hmall/common/utils/WebUtils.java

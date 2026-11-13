@@ -74,11 +74,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
             throw new BizIllegalException("用户密码错误");
         }
 
-        // 2.尝试扣款
-        try {
-            baseMapper.updateMoney(UserContext.getUser(), totalFee);
-        } catch (Exception e) {
-            throw new RuntimeException("扣款失败，可能是余额不足！", e);
+        // 3.尝试扣款（条件更新，余额不足时影响行数为 0）
+        int rows = baseMapper.updateMoney(user.getId(), totalFee);
+        if (rows <= 0) {
+            throw new BizIllegalException("扣款失败，余额不足");
         }
         log.info("扣款成功");
     }

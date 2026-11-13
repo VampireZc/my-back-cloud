@@ -1,2 +1,8 @@
+client/DefaultFeignConfig$1.class
+client/ItemClient.class
+dto/OrderDetailDTO.class
+client/DefaultFeignConfig.class
+dto/ItemDTO.class
 client/UserClient.class
+client/CartClient.class
 client/TradeClient.class

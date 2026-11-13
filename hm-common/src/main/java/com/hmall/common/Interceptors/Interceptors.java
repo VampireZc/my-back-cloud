@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 public class Interceptors implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        String userInfo = request.getHeader("Authorization");
+        String userInfo = request.getHeader("userInfo");
         if (StrUtil.isNotBlank(userInfo)){
             UserContext.setUser(Long.valueOf(userInfo));
         }
         // TODO 测试用
-        UserContext.setUser(1L);
+        // UserContext.setUser(1L);
         // 放行
         return true;
     }

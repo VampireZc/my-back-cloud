@@ -700,3 +700,414 @@ Caused by: com.alibaba.nacos.api.exception.NacosException: Client not connected,
 15:37:38:265  INFO 8328 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
 15:37:38:272  INFO 8328 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
 15:37:38:277  INFO 8328 --- [main] com.zc.item.itemApplication              : Started itemApplication in 1.249 seconds (JVM running for 1.454)
+16:12:48:655  INFO 8328 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:12:48:655  INFO 8328 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+16:12:48:656  INFO 8328 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+16:12:48:692  INFO 8328 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+16:12:48:741  INFO 8328 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+16:12:48:743 DEBUG 8328 --- [http-nio-8090-exec-1] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+16:12:48:752 DEBUG 8328 --- [http-nio-8090-exec-1] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100002465732(Long)
+16:12:48:761 DEBUG 8328 --- [http-nio-8090-exec-1] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+16:13:53:174  WARN 8328 --- [http-nio-8090-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "items"]
+16:14:03:779  WARN 8328 --- [http-nio-8090-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "items"]
+16:14:20:581 DEBUG 8328 --- [http-nio-8090-exec-9] c.zc.item.mapper.ItemMapper.selectById   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id=?
+16:14:20:582 DEBUG 8328 --- [http-nio-8090-exec-9] c.zc.item.mapper.ItemMapper.selectById   : ==> Parameters: 100002464986(Long)
+16:14:20:585 DEBUG 8328 --- [http-nio-8090-exec-9] c.zc.item.mapper.ItemMapper.selectById   : <==      Total: 1
+16:36:53:838 DEBUG 8328 --- [http-nio-8090-exec-3] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+16:36:53:839 DEBUG 8328 --- [http-nio-8090-exec-3] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100002465732(Long)
+16:36:53:842 DEBUG 8328 --- [http-nio-8090-exec-3] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+16:37:13:414 DEBUG 8328 --- [http-nio-8090-exec-4] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+16:37:13:415 DEBUG 8328 --- [http-nio-8090-exec-4] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100002465732(Long)
+16:37:13:416 DEBUG 8328 --- [http-nio-8090-exec-4] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+16:45:59:637 DEBUG 8328 --- [http-nio-8090-exec-6] c.zc.item.mapper.ItemMapper.selectById   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id=?
+16:45:59:637 DEBUG 8328 --- [http-nio-8090-exec-6] c.zc.item.mapper.ItemMapper.selectById   : ==> Parameters: 100002464986(Long)
+16:45:59:645 DEBUG 8328 --- [http-nio-8090-exec-6] c.zc.item.mapper.ItemMapper.selectById   : <==      Total: 1
+16:46:01:904 DEBUG 8328 --- [http-nio-8090-exec-7] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+16:46:01:904 DEBUG 8328 --- [http-nio-8090-exec-7] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100002465732(Long)
+16:46:01:906 DEBUG 8328 --- [http-nio-8090-exec-7] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+17:03:10:096 DEBUG 8328 --- [http-nio-8090-exec-1] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+17:03:10:098 DEBUG 8328 --- [http-nio-8090-exec-1] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100002465732(Long)
+17:03:10:100 DEBUG 8328 --- [http-nio-8090-exec-1] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+17:03:10:972 DEBUG 8328 --- [http-nio-8090-exec-10] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+17:03:10:973 DEBUG 8328 --- [http-nio-8090-exec-10] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100002465732(Long)
+17:03:10:976 DEBUG 8328 --- [http-nio-8090-exec-10] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+17:19:17:332 DEBUG 8328 --- [http-nio-8090-exec-3] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+17:19:17:334 DEBUG 8328 --- [http-nio-8090-exec-3] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100002465732(Long)
+17:19:17:338 DEBUG 8328 --- [http-nio-8090-exec-3] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+17:20:45:650 DEBUG 8328 --- [http-nio-8090-exec-4] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+17:20:45:651 DEBUG 8328 --- [http-nio-8090-exec-4] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100002465732(Long)
+17:20:45:653 DEBUG 8328 --- [http-nio-8090-exec-4] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+17:28:03:644 DEBUG 8328 --- [http-nio-8090-exec-7] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+17:28:03:647 DEBUG 8328 --- [http-nio-8090-exec-7] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100002465732(Long)
+17:28:03:650 DEBUG 8328 --- [http-nio-8090-exec-7] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+17:28:07:732 DEBUG 8328 --- [http-nio-8090-exec-9] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+17:28:07:733 DEBUG 8328 --- [http-nio-8090-exec-9] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100002465732(Long)
+17:28:07:733 DEBUG 8328 --- [http-nio-8090-exec-9] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+17:28:11:011 DEBUG 8328 --- [http-nio-8090-exec-8] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+17:28:11:011 DEBUG 8328 --- [http-nio-8090-exec-8] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100002465732(Long)
+17:28:11:013 DEBUG 8328 --- [http-nio-8090-exec-8] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+17:28:16:773 DEBUG 8328 --- [http-nio-8090-exec-10] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? )
+17:28:16:774 DEBUG 8328 --- [http-nio-8090-exec-10] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100000004580(Long), 100002465732(Long)
+17:28:16:776 DEBUG 8328 --- [http-nio-8090-exec-10] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 3
+17:28:41:112  WARN 8328 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+17:28:41:112  WARN 8328 --- [Thread-13] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+17:28:41:112  WARN 8328 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+17:28:41:112  WARN 8328 --- [Thread-13] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+17:28:41:122  INFO 8328 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+17:28:41:127  INFO 8328 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+17:28:41:131  INFO 8328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+17:28:41:132  INFO 8328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+17:28:42:450  INFO 16084 --- [main] com.zc.item.itemApplication              : Starting itemApplication using Java 17.0.21.0.2 on zcdeMacBook-Pro.local with PID 16084 (/Users/zc/my/study/hmall/item-service/target/classes started by zc in /Users/zc/my/study/hmall)
+17:28:42:451 DEBUG 16084 --- [main] com.zc.item.itemApplication              : Running with Spring Boot v2.7.12, Spring v5.3.27
+17:28:42:451  INFO 16084 --- [main] com.zc.item.itemApplication              : The following 1 profile is active: "dev"
+17:28:42:732  INFO 16084 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4c0adff7-b85b-38b0-bfbc-07ae3bfa7af9
+17:28:42:825  INFO 16084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+17:28:42:827  INFO 16084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:28:42:828  INFO 16084 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+17:28:42:855  INFO 16084 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+17:28:42:855  INFO 16084 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 386 ms
+17:28:43:102  INFO 16084 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+17:28:43:158  INFO 16084 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+17:28:43:158  INFO 16084 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+17:28:43:459  INFO 16084 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+17:28:43:459  INFO 16084 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+17:28:43:459  INFO 16084 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+17:28:43:460  INFO 16084 --- [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+17:28:43:481  INFO 16084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path '/api'
+17:28:43:485  INFO 16084 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.31.39:8090 register finished
+17:28:43:499  INFO 16084 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+17:28:43:500  INFO 16084 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+17:28:43:507  INFO 16084 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+17:28:43:512  INFO 16084 --- [main] com.zc.item.itemApplication              : Started itemApplication in 1.215 seconds (JVM running for 1.393)
+17:28:46:113  INFO 16084 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:28:46:113  INFO 16084 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+17:28:46:114  INFO 16084 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+17:28:46:192  INFO 16084 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+17:28:46:236  INFO 16084 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:28:46:239 DEBUG 16084 --- [http-nio-8090-exec-1] c.z.i.m.ItemMapper.selectList_mpCount    : ==>  Preparing: SELECT COUNT(*) AS total FROM item WHERE (status = ?)
+17:28:46:246 DEBUG 16084 --- [http-nio-8090-exec-1] c.z.i.m.ItemMapper.selectList_mpCount    : ==> Parameters: 1(Integer)
+17:28:46:273 DEBUG 16084 --- [http-nio-8090-exec-1] c.z.i.m.ItemMapper.selectList_mpCount    : <==      Total: 1
+17:28:46:277 DEBUG 16084 --- [http-nio-8090-exec-1] c.zc.item.mapper.ItemMapper.selectList   : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+17:28:46:278 DEBUG 16084 --- [http-nio-8090-exec-1] c.zc.item.mapper.ItemMapper.selectList   : ==> Parameters: 1(Integer), 20(Long)
+17:28:46:283 DEBUG 16084 --- [http-nio-8090-exec-1] c.zc.item.mapper.ItemMapper.selectList   : <==      Total: 20
+17:28:53:365 DEBUG 16084 --- [http-nio-8090-exec-2] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? )
+17:28:53:366 DEBUG 16084 --- [http-nio-8090-exec-2] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100000004580(Long), 100002164668(Long), 100002465732(Long)
+17:28:53:369 DEBUG 16084 --- [http-nio-8090-exec-2] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
+17:28:59:575 DEBUG 16084 --- [http-nio-8090-exec-3] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? )
+17:28:59:576 DEBUG 16084 --- [http-nio-8090-exec-3] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100000004580(Long), 100002164668(Long), 100002465732(Long)
+17:28:59:577 DEBUG 16084 --- [http-nio-8090-exec-3] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
+17:29:25:145 DEBUG 16084 --- [http-nio-8090-exec-5] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? )
+17:29:25:146 DEBUG 16084 --- [http-nio-8090-exec-5] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100000004580(Long), 100002164668(Long), 100002465732(Long)
+17:29:25:147 DEBUG 16084 --- [http-nio-8090-exec-5] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
+17:29:25:211  WARN 16084 --- [http-nio-8090-exec-6] c.zc.item.service.impl.ItemServiceImpl   : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2383396c] Transaction not enabled
+17:29:25:213 ERROR 16084 --- [http-nio-8090-exec-6] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/api] threw exception [Request processing failed; nested exception is com.hmall.common.exception.BizIllegalException: 更新库存异常，可能是库存不足!] with root cause
+
+java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.hmall.mapper.ItemMapper.updateStock
+	at com.baomidou.mybatisplus.core.MybatisConfiguration$StrictMap.get(MybatisConfiguration.java:454) ~[mybatis-plus-core-3.5.3.2.jar:3.5.3.2]
+	at com.baomidou.mybatisplus.core.MybatisConfiguration.getMappedStatement(MybatisConfiguration.java:353) ~[mybatis-plus-core-3.5.3.2.jar:3.5.3.2]
+	at com.baomidou.mybatisplus.core.MybatisConfiguration.getMappedStatement(MybatisConfiguration.java:345) ~[mybatis-plus-core-3.5.3.2.jar:3.5.3.2]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:196) ~[mybatis-3.5.13.jar:3.5.13]
+	at com.zc.item.service.impl.ItemServiceImpl.lambda$deductStock$0(ItemServiceImpl.java:31) ~[classes/:na]
+	at com.baomidou.mybatisplus.extension.toolkit.SqlHelper.lambda$executeBatch$1(SqlHelper.java:236) ~[mybatis-plus-extension-3.5.3.2.jar:3.5.3.2]
+	at com.baomidou.mybatisplus.extension.toolkit.SqlHelper.executeBatch(SqlHelper.java:190) ~[mybatis-plus-extension-3.5.3.2.jar:3.5.3.2]
+	at com.baomidou.mybatisplus.extension.toolkit.SqlHelper.executeBatch(SqlHelper.java:231) ~[mybatis-plus-extension-3.5.3.2.jar:3.5.3.2]
+	at com.baomidou.mybatisplus.extension.service.impl.ServiceImpl.executeBatch(ServiceImpl.java:250) ~[mybatis-plus-extension-3.5.3.2.jar:3.5.3.2]
+	at com.baomidou.mybatisplus.extension.service.impl.ServiceImpl.executeBatch(ServiceImpl.java:263) ~[mybatis-plus-extension-3.5.3.2.jar:3.5.3.2]
+	at com.zc.item.service.impl.ItemServiceImpl.deductStock(ItemServiceImpl.java:31) ~[classes/:na]
+	at com.zc.item.service.impl.ItemServiceImpl$$FastClassBySpringCGLIB$$9c820ed0.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704) ~[spring-aop-5.3.27.jar:5.3.27]
+	at com.zc.item.service.impl.ItemServiceImpl$$EnhancerBySpringCGLIB$$27d05aea.deductStock(<generated>) ~[classes/:na]
+	at com.zc.item.controller.ItemController.deductStock(ItemController.java:82) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:558) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+17:29:37:804 DEBUG 16084 --- [http-nio-8090-exec-7] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? )
+17:29:37:805 DEBUG 16084 --- [http-nio-8090-exec-7] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100000004580(Long), 100002164668(Long), 100002465732(Long)
+17:29:37:807 DEBUG 16084 --- [http-nio-8090-exec-7] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
+17:29:41:393 DEBUG 16084 --- [http-nio-8090-exec-8] c.z.i.m.ItemMapper.selectList_mpCount    : ==>  Preparing: SELECT COUNT(*) AS total FROM item WHERE (status = ?)
+17:29:41:393 DEBUG 16084 --- [http-nio-8090-exec-8] c.z.i.m.ItemMapper.selectList_mpCount    : ==> Parameters: 1(Integer)
+17:29:41:412 DEBUG 16084 --- [http-nio-8090-exec-8] c.z.i.m.ItemMapper.selectList_mpCount    : <==      Total: 1
+17:29:41:414 DEBUG 16084 --- [http-nio-8090-exec-8] c.zc.item.mapper.ItemMapper.selectList   : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+17:29:41:415 DEBUG 16084 --- [http-nio-8090-exec-8] c.zc.item.mapper.ItemMapper.selectList   : ==> Parameters: 1(Integer), 20(Long)
+17:29:41:418 DEBUG 16084 --- [http-nio-8090-exec-8] c.zc.item.mapper.ItemMapper.selectList   : <==      Total: 20
+17:29:45:532 DEBUG 16084 --- [http-nio-8090-exec-9] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? )
+17:29:45:532 DEBUG 16084 --- [http-nio-8090-exec-9] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100000004580(Long), 100002164668(Long), 100002465732(Long)
+17:29:45:534 DEBUG 16084 --- [http-nio-8090-exec-9] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
+17:29:46:291 DEBUG 16084 --- [http-nio-8090-exec-10] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? , ? )
+17:29:46:291 DEBUG 16084 --- [http-nio-8090-exec-10] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100000004580(Long), 100002164668(Long), 100002465732(Long)
+17:29:46:293 DEBUG 16084 --- [http-nio-8090-exec-10] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 4
+17:29:49:809 DEBUG 16084 --- [http-nio-8090-exec-1] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? )
+17:29:49:810 DEBUG 16084 --- [http-nio-8090-exec-1] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100002164668(Long), 100002465732(Long)
+17:29:49:820 DEBUG 16084 --- [http-nio-8090-exec-1] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 3
+17:29:50:343 DEBUG 16084 --- [http-nio-8090-exec-2] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+17:29:50:344 DEBUG 16084 --- [http-nio-8090-exec-2] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002464986(Long), 100002465732(Long)
+17:29:50:346 DEBUG 16084 --- [http-nio-8090-exec-2] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+17:29:50:514 DEBUG 16084 --- [http-nio-8090-exec-3] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+17:29:50:514 DEBUG 16084 --- [http-nio-8090-exec-3] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002465732(Long)
+17:29:50:517 DEBUG 16084 --- [http-nio-8090-exec-3] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:29:52:220 DEBUG 16084 --- [http-nio-8090-exec-4] c.z.i.m.ItemMapper.selectList_mpCount    : ==>  Preparing: SELECT COUNT(*) AS total FROM item WHERE (status = ?)
+17:29:52:220 DEBUG 16084 --- [http-nio-8090-exec-4] c.z.i.m.ItemMapper.selectList_mpCount    : ==> Parameters: 1(Integer)
+17:29:52:243 DEBUG 16084 --- [http-nio-8090-exec-4] c.z.i.m.ItemMapper.selectList_mpCount    : <==      Total: 1
+17:29:52:247 DEBUG 16084 --- [http-nio-8090-exec-4] c.zc.item.mapper.ItemMapper.selectList   : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+17:29:52:247 DEBUG 16084 --- [http-nio-8090-exec-4] c.zc.item.mapper.ItemMapper.selectList   : ==> Parameters: 1(Integer), 20(Long)
+17:29:52:251 DEBUG 16084 --- [http-nio-8090-exec-4] c.zc.item.mapper.ItemMapper.selectList   : <==      Total: 20
+17:29:55:052 DEBUG 16084 --- [http-nio-8090-exec-5] c.z.i.m.ItemMapper.selectList_mpCount    : ==>  Preparing: SELECT COUNT(*) AS total FROM item WHERE (status = ?)
+17:29:55:053 DEBUG 16084 --- [http-nio-8090-exec-5] c.z.i.m.ItemMapper.selectList_mpCount    : ==> Parameters: 1(Integer)
+17:29:55:072 DEBUG 16084 --- [http-nio-8090-exec-5] c.z.i.m.ItemMapper.selectList_mpCount    : <==      Total: 1
+17:29:55:074 DEBUG 16084 --- [http-nio-8090-exec-5] c.zc.item.mapper.ItemMapper.selectList   : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+17:29:55:075 DEBUG 16084 --- [http-nio-8090-exec-5] c.zc.item.mapper.ItemMapper.selectList   : ==> Parameters: 1(Integer), 20(Long)
+17:29:55:078 DEBUG 16084 --- [http-nio-8090-exec-5] c.zc.item.mapper.ItemMapper.selectList   : <==      Total: 20
+17:29:59:970 DEBUG 16084 --- [http-nio-8090-exec-6] c.z.i.m.ItemMapper.selectList_mpCount    : ==>  Preparing: SELECT COUNT(*) AS total FROM item WHERE (category = ? AND status = ?)
+17:29:59:971 DEBUG 16084 --- [http-nio-8090-exec-6] c.z.i.m.ItemMapper.selectList_mpCount    : ==> Parameters: 休闲鞋(String), 1(Integer)
+17:30:00:006 DEBUG 16084 --- [http-nio-8090-exec-6] c.z.i.m.ItemMapper.selectList_mpCount    : <==      Total: 1
+17:30:00:009 DEBUG 16084 --- [http-nio-8090-exec-6] c.zc.item.mapper.ItemMapper.selectList   : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (category = ? AND status = ?) ORDER BY update_time DESC LIMIT ?
+17:30:00:010 DEBUG 16084 --- [http-nio-8090-exec-6] c.zc.item.mapper.ItemMapper.selectList   : ==> Parameters: 休闲鞋(String), 1(Integer), 20(Long)
+17:30:00:060 DEBUG 16084 --- [http-nio-8090-exec-6] c.zc.item.mapper.ItemMapper.selectList   : <==      Total: 20
+17:30:01:651 DEBUG 16084 --- [http-nio-8090-exec-7] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+17:30:01:652 DEBUG 16084 --- [http-nio-8090-exec-7] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1291197133(Long)
+17:30:01:654 DEBUG 16084 --- [http-nio-8090-exec-7] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:30:07:498 DEBUG 16084 --- [http-nio-8090-exec-8] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+17:30:07:499 DEBUG 16084 --- [http-nio-8090-exec-8] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1291197133(Long)
+17:30:07:501 DEBUG 16084 --- [http-nio-8090-exec-8] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:30:07:524  WARN 16084 --- [http-nio-8090-exec-9] c.zc.item.service.impl.ItemServiceImpl   : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7ddfbdf1] Transaction not enabled
+17:30:07:525 ERROR 16084 --- [http-nio-8090-exec-9] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/api] threw exception [Request processing failed; nested exception is com.hmall.common.exception.BizIllegalException: 更新库存异常，可能是库存不足!] with root cause
+
+java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for com.hmall.mapper.ItemMapper.updateStock
+	at com.baomidou.mybatisplus.core.MybatisConfiguration$StrictMap.get(MybatisConfiguration.java:454) ~[mybatis-plus-core-3.5.3.2.jar:3.5.3.2]
+	at com.baomidou.mybatisplus.core.MybatisConfiguration.getMappedStatement(MybatisConfiguration.java:353) ~[mybatis-plus-core-3.5.3.2.jar:3.5.3.2]
+	at com.baomidou.mybatisplus.core.MybatisConfiguration.getMappedStatement(MybatisConfiguration.java:345) ~[mybatis-plus-core-3.5.3.2.jar:3.5.3.2]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:196) ~[mybatis-3.5.13.jar:3.5.13]
+	at com.zc.item.service.impl.ItemServiceImpl.lambda$deductStock$0(ItemServiceImpl.java:31) ~[classes/:na]
+	at com.baomidou.mybatisplus.extension.toolkit.SqlHelper.lambda$executeBatch$1(SqlHelper.java:236) ~[mybatis-plus-extension-3.5.3.2.jar:3.5.3.2]
+	at com.baomidou.mybatisplus.extension.toolkit.SqlHelper.executeBatch(SqlHelper.java:190) ~[mybatis-plus-extension-3.5.3.2.jar:3.5.3.2]
+	at com.baomidou.mybatisplus.extension.toolkit.SqlHelper.executeBatch(SqlHelper.java:231) ~[mybatis-plus-extension-3.5.3.2.jar:3.5.3.2]
+	at com.baomidou.mybatisplus.extension.service.impl.ServiceImpl.executeBatch(ServiceImpl.java:250) ~[mybatis-plus-extension-3.5.3.2.jar:3.5.3.2]
+	at com.baomidou.mybatisplus.extension.service.impl.ServiceImpl.executeBatch(ServiceImpl.java:263) ~[mybatis-plus-extension-3.5.3.2.jar:3.5.3.2]
+	at com.zc.item.service.impl.ItemServiceImpl.deductStock(ItemServiceImpl.java:31) ~[classes/:na]
+	at com.zc.item.service.impl.ItemServiceImpl$$FastClassBySpringCGLIB$$9c820ed0.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704) ~[spring-aop-5.3.27.jar:5.3.27]
+	at com.zc.item.service.impl.ItemServiceImpl$$EnhancerBySpringCGLIB$$27d05aea.deductStock(<generated>) ~[classes/:na]
+	at com.zc.item.controller.ItemController.deductStock(ItemController.java:82) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:558) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+17:35:28:893  WARN 16084 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+17:35:28:893  WARN 16084 --- [Thread-13] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+17:35:28:894  WARN 16084 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+17:35:28:894  WARN 16084 --- [Thread-13] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+17:35:28:904  INFO 16084 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+17:35:28:909  INFO 16084 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+17:35:28:914  INFO 16084 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+17:35:28:916  INFO 16084 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+17:35:30:353  INFO 16495 --- [main] com.zc.item.itemApplication              : Starting itemApplication using Java 17.0.21.0.2 on zcdeMacBook-Pro.local with PID 16495 (/Users/zc/my/study/hmall/item-service/target/classes started by zc in /Users/zc/my/study/hmall)
+17:35:30:354 DEBUG 16495 --- [main] com.zc.item.itemApplication              : Running with Spring Boot v2.7.12, Spring v5.3.27
+17:35:30:354  INFO 16495 --- [main] com.zc.item.itemApplication              : The following 1 profile is active: "dev"
+17:35:30:663  INFO 16495 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4c0adff7-b85b-38b0-bfbc-07ae3bfa7af9
+17:35:30:764  INFO 16495 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+17:35:30:766  INFO 16495 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:35:30:766  INFO 16495 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+17:35:30:793  INFO 16495 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+17:35:30:794  INFO 16495 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 425 ms
+17:35:31:042  INFO 16495 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+17:35:31:098  INFO 16495 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+17:35:31:098  INFO 16495 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+17:35:31:397  INFO 16495 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+17:35:31:398  INFO 16495 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+17:35:31:398  INFO 16495 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+17:35:31:398  INFO 16495 --- [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+17:35:31:419  INFO 16495 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path '/api'
+17:35:31:425  INFO 16495 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.31.39:8090 register finished
+17:35:31:428  INFO 16495 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+17:35:31:429  INFO 16495 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+17:35:31:436  INFO 16495 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+17:35:31:440  INFO 16495 --- [main] com.zc.item.itemApplication              : Started itemApplication in 1.247 seconds (JVM running for 1.433)
+17:35:36:178  INFO 16495 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:35:36:178  INFO 16495 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+17:35:36:179  INFO 16495 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+17:35:36:216  INFO 16495 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+17:35:36:266  INFO 16495 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+17:35:36:268 DEBUG 16495 --- [http-nio-8090-exec-1] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+17:35:36:276 DEBUG 16495 --- [http-nio-8090-exec-1] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1291197133(Long)
+17:35:36:286 DEBUG 16495 --- [http-nio-8090-exec-1] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:35:36:329  WARN 16495 --- [http-nio-8090-exec-2] c.zc.item.service.impl.ItemServiceImpl   : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3fd4ecea] Transaction not enabled
+17:35:36:329 DEBUG 16495 --- [http-nio-8090-exec-2] c.zc.item.mapper.ItemMapper.updateStock  : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+17:35:36:330 DEBUG 16495 --- [http-nio-8090-exec-2] c.zc.item.mapper.ItemMapper.updateStock  : ==> Parameters: 1(Integer), 1291197133(Long)
+17:50:48:541  WARN 16495 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+17:50:48:542  WARN 16495 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+17:50:48:542  WARN 16495 --- [Thread-13] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+17:50:48:543  WARN 16495 --- [Thread-13] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+17:50:48:558  INFO 16495 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+17:50:48:564  INFO 16495 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+17:50:48:568  INFO 16495 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+17:50:48:571  INFO 16495 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+17:50:53:051  INFO 17430 --- [main] com.zc.item.itemApplication              : Starting itemApplication using Java 17.0.21.0.2 on zcdeMacBook-Pro.local with PID 17430 (/Users/zc/my/study/hmall/item-service/target/classes started by zc in /Users/zc/my/study/hmall)
+17:50:53:052 DEBUG 17430 --- [main] com.zc.item.itemApplication              : Running with Spring Boot v2.7.12, Spring v5.3.27
+17:50:53:052  INFO 17430 --- [main] com.zc.item.itemApplication              : The following 1 profile is active: "dev"
+17:50:53:380  INFO 17430 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4c0adff7-b85b-38b0-bfbc-07ae3bfa7af9
+17:50:53:491  INFO 17430 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+17:50:53:494  INFO 17430 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+17:50:53:494  INFO 17430 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+17:50:53:524  INFO 17430 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+17:50:53:524  INFO 17430 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 456 ms
+17:50:53:821  INFO 17430 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+17:50:53:883  INFO 17430 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+17:50:53:883  INFO 17430 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+17:50:54:176  INFO 17430 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+17:50:54:176  INFO 17430 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+17:50:54:176  INFO 17430 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+17:50:54:176  INFO 17430 --- [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+17:50:54:198  INFO 17430 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path '/api'
+17:50:54:204  INFO 17430 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.31.39:8090 register finished
+17:50:54:206  INFO 17430 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+17:50:54:207  INFO 17430 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+17:50:54:215  INFO 17430 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+17:50:54:224  INFO 17430 --- [main] com.zc.item.itemApplication              : Started itemApplication in 1.356 seconds (JVM running for 1.529)
+18:04:43:034  INFO 17430 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:04:43:034  INFO 17430 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+18:04:43:036  INFO 17430 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+18:04:43:066  INFO 17430 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+18:04:43:106  INFO 17430 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+18:04:43:108 DEBUG 17430 --- [http-nio-8090-exec-1] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:04:43:116 DEBUG 17430 --- [http-nio-8090-exec-1] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1291197133(Long)
+18:04:43:124 DEBUG 17430 --- [http-nio-8090-exec-1] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:04:45:958 DEBUG 17430 --- [http-nio-8090-exec-2] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:04:45:958 DEBUG 17430 --- [http-nio-8090-exec-2] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1291197133(Long)
+18:04:45:961 DEBUG 17430 --- [http-nio-8090-exec-2] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:04:50:247 DEBUG 17430 --- [http-nio-8090-exec-3] c.z.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:04:50:247 DEBUG 17430 --- [http-nio-8090-exec-3] c.z.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 1291197133(Long)
+18:04:50:248 DEBUG 17430 --- [http-nio-8090-exec-3] c.z.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:04:50:301  WARN 17430 --- [http-nio-8090-exec-4] c.zc.item.service.impl.ItemServiceImpl   : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@543ed4fe] Transaction not enabled
+18:04:50:301 DEBUG 17430 --- [http-nio-8090-exec-4] c.zc.item.mapper.ItemMapper.updateStock  : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+18:04:50:302 DEBUG 17430 --- [http-nio-8090-exec-4] c.zc.item.mapper.ItemMapper.updateStock  : ==> Parameters: 1(Integer), 1291197133(Long)
+18:06:11:051  WARN 17430 --- [Thread-13] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+18:06:11:052  WARN 17430 --- [Thread-13] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+18:06:11:052  WARN 17430 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+18:06:11:052  WARN 17430 --- [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+18:06:11:059  INFO 17430 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+18:06:11:061  INFO 17430 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+18:06:11:066  INFO 17430 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+18:06:11:068  INFO 17430 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+18:06:13:689  INFO 18398 --- [main] com.zc.item.itemApplication              : Starting itemApplication using Java 17.0.21.0.2 on zcdeMacBook-Pro.local with PID 18398 (/Users/zc/my/study/hmall/item-service/target/classes started by zc in /Users/zc/my/study/hmall)
+18:06:13:690 DEBUG 18398 --- [main] com.zc.item.itemApplication              : Running with Spring Boot v2.7.12, Spring v5.3.27
+18:06:13:690  INFO 18398 --- [main] com.zc.item.itemApplication              : The following 1 profile is active: "dev"
+18:06:13:993  INFO 18398 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4c0adff7-b85b-38b0-bfbc-07ae3bfa7af9
+18:06:14:100  INFO 18398 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+18:06:14:103  INFO 18398 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+18:06:14:103  INFO 18398 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+18:06:14:131  INFO 18398 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+18:06:14:131  INFO 18398 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 424 ms
+18:06:14:391  INFO 18398 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+18:06:14:441  INFO 18398 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+18:06:14:441  INFO 18398 --- [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+18:06:14:731  INFO 18398 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+18:06:14:732  INFO 18398 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+18:06:14:732  INFO 18398 --- [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+18:06:14:732  INFO 18398 --- [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+18:06:14:754  INFO 18398 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path '/api'
+18:06:14:759  INFO 18398 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.31.39:8090 register finished
+18:06:14:762  INFO 18398 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+18:06:14:763  INFO 18398 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+18:06:14:771  INFO 18398 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+18:06:14:776  INFO 18398 --- [main] com.zc.item.itemApplication              : Started itemApplication in 1.268 seconds (JVM running for 1.455)

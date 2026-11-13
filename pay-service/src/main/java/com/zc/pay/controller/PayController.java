@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Api(tags = "支付相关接口")
 @RestController
-@RequestMapping("pay-orders")
+@RequestMapping("/pay-orders")
 @RequiredArgsConstructor
 public class PayController {
 
