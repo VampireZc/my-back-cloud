@@ -1,6 +1,7 @@
-package client;
+package config;
 
 import com.hmall.common.utils.UserContext;
+import fallback.ItemClientFallback;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
 import org.springframework.context.annotation.Bean;
@@ -21,5 +22,10 @@ public class DefaultFeignConfig {
                 template.header("userInfo", userId.toString());
             }
         };
+    }
+
+    @Bean
+    public ItemClientFallback itemClientFallback(){
+        return new ItemClientFallback();
     }
 }

@@ -1,6 +1,6 @@
 package com.zc.cart;
 
-import client.DefaultFeignConfig;
+import config.DefaultFeignConfig;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

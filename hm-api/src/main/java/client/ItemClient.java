@@ -1,7 +1,9 @@
 package client;
 
+import config.DefaultFeignConfig;
 import dto.ItemDTO;
 import dto.OrderDetailDTO;
+import fallback.ItemClientFallback;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +15,10 @@ import java.util.Collection;
 import java.util.List;
 
 //声明服务名称
-@FeignClient("item-service")
+@FeignClient(value = "item-service",
+        fallbackFactory = ItemClientFallback.class,
+        configuration = DefaultFeignConfig .class
+)
 public interface ItemClient {
 
     // 声明请求方式
