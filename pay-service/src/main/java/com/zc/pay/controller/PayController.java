@@ -1,10 +1,13 @@
 package com.zc.pay.controller;
 
 import com.hmall.common.exception.BizIllegalException;
+import com.hmall.common.utils.BeanUtils;
 import com.zc.pay.domain.dto.PayApplyDTO;
 import com.zc.pay.domain.dto.PayOrderFormDTO;
+import com.zc.pay.domain.po.PayOrder;
 import com.zc.pay.enums.PayType;
 import com.zc.pay.service.IPayOrderService;
+import dto.PayOrderDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -35,5 +38,12 @@ public class PayController {
     public void tryPayOrderByBalance(@PathVariable("id") Long id, @RequestBody PayOrderFormDTO payOrderFormDTO){
         payOrderFormDTO.setId(id);
         payOrderService.tryPayOrderByBalance(payOrderFormDTO);
+    }
+
+    @ApiOperation("根据id查询支付单")
+    @GetMapping("/biz/{id}")
+    public PayOrderDTO queryPayOrderByBizOrderNo(@PathVariable("id") Long id){
+        PayOrder payOrder = payOrderService.lambdaQuery().eq(PayOrder::getBizOrderNo, id).one();
+        return BeanUtils.copyBean(payOrder, PayOrderDTO.class);
     }
 }

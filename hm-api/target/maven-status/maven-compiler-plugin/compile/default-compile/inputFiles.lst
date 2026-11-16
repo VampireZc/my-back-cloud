@@ -1,8 +1,11 @@
 /Users/zc/my/study/hmall/hm-api/src/main/java/client/ItemClient.java
 /Users/zc/my/study/hmall/hm-api/src/main/java/config/DefaultFeignConfig.java
 /Users/zc/my/study/hmall/hm-api/src/main/java/dto/ItemDTO.java
+/Users/zc/my/study/hmall/hm-api/src/main/java/dto/PayOrderDTO.java
 /Users/zc/my/study/hmall/hm-api/src/main/java/client/TradeClient.java
 /Users/zc/my/study/hmall/hm-api/src/main/java/dto/OrderDetailDTO.java
+/Users/zc/my/study/hmall/hm-api/src/main/java/fallback/payClientFallback.java
+/Users/zc/my/study/hmall/hm-api/src/main/java/client/PayClient.java
 /Users/zc/my/study/hmall/hm-api/src/main/java/fallback/ItemClientFallback.java
 /Users/zc/my/study/hmall/hm-api/src/main/java/client/CartClient.java
 /Users/zc/my/study/hmall/hm-api/src/main/java/client/UserClient.java

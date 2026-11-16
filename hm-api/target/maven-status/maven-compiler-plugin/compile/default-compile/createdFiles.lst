@@ -1,10 +1,14 @@
 fallback/ItemClientFallback.class
 client/ItemClient.class
-dto/OrderDetailDTO.class
-config/DefaultFeignConfig.class
 dto/ItemDTO.class
 config/DefaultFeignConfig$1.class
-client/UserClient.class
 client/CartClient.class
 client/TradeClient.class
+fallback/payClientFallback$1.class
+dto/OrderDetailDTO.class
+config/DefaultFeignConfig.class
+client/PayClient.class
+client/UserClient.class
+fallback/payClientFallback.class
+dto/PayOrderDTO.class
 fallback/ItemClientFallback$1.class

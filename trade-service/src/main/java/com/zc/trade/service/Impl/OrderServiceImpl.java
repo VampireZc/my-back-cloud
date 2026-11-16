@@ -5,6 +5,7 @@ import client.ItemClient;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hmall.common.exception.BadRequestException;
 import com.hmall.common.utils.UserContext;
+import com.zc.trade.constants.MqConstants;
 import com.zc.trade.domain.dto.OrderFormDTO;
 import com.zc.trade.domain.po.Order;
 import com.zc.trade.domain.po.OrderDetail;
@@ -88,11 +89,29 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         } catch (Exception e) {
             throw new RuntimeException("库存不足！");
         }
+
+        // 发送延时消息
+        rabbitTemplate.convertAndSend(
+                MqConstants.DELAY_EXCHANGE_NAME,
+                MqConstants.DELAY_QUEUE_ROUTING_KEY,
+                order.getId(),
+                message -> {
+                    message.getMessageProperties().setExpiration("5000");
+                    return message;
+                }
+
+        );
+
         return order.getId();
     }
 
     @Override
     public void markOrderPaySuccess(Long orderId) {
+        Order old = getById(orderId);
+        // 订单不存在或者订单状态不是1，放弃处理
+        if (old == null || old.getStatus() != 1){
+            return;
+        }
         Order order = new Order();
         order.setId(orderId);
         order.setStatus(2);

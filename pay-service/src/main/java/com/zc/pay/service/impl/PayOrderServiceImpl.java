@@ -68,12 +68,12 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
         //tradeClient.markOrderPaySuccess(po.getBizOrderNo());
 
         // 发送mq消息异步更新订单状态
-        try {
-            rabbitTemplate.convertAndSend("pay.direct", "pay.success", po.getBizOrderNo());
-        } catch (Exception e) {
-            // 发送失败，进行重试或者记录日志
-            e.printStackTrace();
-        }
+//        try {
+//            rabbitTemplate.convertAndSend("pay.direct", "pay.success", po.getBizOrderNo());
+//        } catch (Exception e) {
+//            // 发送失败，进行重试或者记录日志
+//            e.printStackTrace();
+//        }
     }
 
     public boolean markPayOrderSuccess(Long id, LocalDateTime successTime) {
