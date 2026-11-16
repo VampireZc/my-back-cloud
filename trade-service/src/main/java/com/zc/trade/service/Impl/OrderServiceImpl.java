@@ -14,14 +14,12 @@ import com.zc.trade.service.IOrderService;
 import dto.ItemDTO;
 import dto.OrderDetailDTO;
 import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -39,6 +37,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     private final ItemClient itemService;
     private final IOrderDetailService detailService;
     private final CartClient cartService;
+    private final RabbitTemplate rabbitTemplate;
 
     @Override
     @Transactional
@@ -76,7 +75,12 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         detailService.saveBatch(details);
 
         // 3.清理购物车商品
-        cartService.deleteCartItemByIds(itemIds);
+        // cartService.deleteCartItemByIds(itemIds);
+        // 用 HashMap 而不是 Dict/KeySet：Jackson 转换器默认只信任 java.util/java.lang 下的类型
+        Map<String, Object> cartClearMsg = new HashMap<>();
+        cartClearMsg.put("userId", order.getUserId());
+        cartClearMsg.put("itemIds", new ArrayList<>(itemIds));
+        rabbitTemplate.convertAndSend("trade.topic", "order.create", cartClearMsg);
 
         // 4.扣减库存
         try {

@@ -134,14 +134,18 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     }
 
     @Override
-    public void removeByItemIds(Collection<Long> itemIds) {
+    public int removeByItemIds(Long userId, Collection<Long> itemIds) {
+        // 消费者线程没有登录上下文，userId 或商品id为空时直接返回，避免误删或 IN () 语法错误
+        if (userId == null || CollUtils.isEmpty(itemIds)) {
+            return 0;
+        }
         // 1.构建删除条件，userId和itemId
         QueryWrapper<Cart> queryWrapper = new QueryWrapper<Cart>();
         queryWrapper.lambda()
-                .eq(Cart::getUserId, UserContext.getUser())
+                .eq(Cart::getUserId, userId)
                 .in(Cart::getItemId, itemIds);
-        // 2.删除
-        remove(queryWrapper);
+        // 2.删除，返回实际删除的条目数
+        return baseMapper.delete(queryWrapper);
     }
 
     private void checkCartsFull(Long userId) {

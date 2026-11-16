@@ -15,6 +15,7 @@ import com.zc.pay.enums.PayStatus;
 import com.zc.pay.mapper.PayOrderMapper;
 import com.zc.pay.service.IPayOrderService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -35,6 +36,8 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
     private final UserClient userClient;
 
     private final TradeClient tradeClient;
+
+    private final RabbitTemplate rabbitTemplate;
 
     @Override
     public String applyPayOrder(PayApplyDTO applyDTO) {
@@ -62,7 +65,15 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
             throw new BizIllegalException("交易已支付或关闭！");
         }
         // 5.修改订单状态
-        tradeClient.markOrderPaySuccess(po.getBizOrderNo());
+        //tradeClient.markOrderPaySuccess(po.getBizOrderNo());
+
+        // 发送mq消息异步更新订单状态
+        try {
+            rabbitTemplate.convertAndSend("pay.direct", "pay.success", po.getBizOrderNo());
+        } catch (Exception e) {
+            // 发送失败，进行重试或者记录日志
+            e.printStackTrace();
+        }
     }
 
     public boolean markPayOrderSuccess(Long id, LocalDateTime successTime) {

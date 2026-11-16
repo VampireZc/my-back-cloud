@@ -1,6 +1,7 @@
 package com.zc.cart.controller;
 
 
+import com.hmall.common.utils.UserContext;
 import com.zc.cart.domain.dto.CartFormDTO;
 import com.zc.cart.domain.po.Cart;
 import com.zc.cart.domain.vo.CartVO;
@@ -49,6 +50,6 @@ public class CartController {
     @ApiImplicitParam(name = "ids", value = "购物车条目id集合")
     @DeleteMapping
     public void deleteCartItemByIds(@RequestParam("ids") List<Long> ids){
-        cartService.removeByItemIds(ids);
+        cartService.removeByItemIds(UserContext.getUser(), ids);
     }
 }
