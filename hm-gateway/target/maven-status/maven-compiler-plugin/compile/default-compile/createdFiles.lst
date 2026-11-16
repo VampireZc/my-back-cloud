@@ -1,0 +1,6 @@
+com/zc/gateway/GatewayApplication.class
+com/zc/gateway/config/AuthProperties.class
+com/zc/gateway/config/JwtProperties.class
+com/zc/gateway/config/SecurityConfig.class
+com/zc/gateway/util/JwtTool.class
+com/zc/gateway/filter/AuthGlobalFilter.class

@@ -1,0 +1,50 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.64.4:8848
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/api/addresses/**,/api/users/**
+
+        - id: trade-service
+          uri: lb://trade-service
+          predicates:
+            - Path=/api/orders/**
+
+        - id: pay-service
+          uri: lb://pay-service
+          predicates:
+            - Path=/api/pay-orders/**
+
+        - id: cart-service
+          uri: lb://cart-service
+          predicates:
+            - Path=/api/carts/**
+
+        - id: item-service
+          uri: lb://item-service
+          predicates:
+            - Path=/api/items/**,/api/search/**
+
+hm:
+  jwt:
+    location: classpath:hmall.jks # 秘钥地址
+    alias: hmall # 秘钥别名
+    password: hmall123 # 秘钥文件密码
+    tokenTTL: 30m # 登录有效期
+  auth:
+    excludePaths: # 无需登录校验的路径
+      - /api/search/**
+      - /api/users/login
+      - /api/items/**
+# keytool -genkeypair -alias hmall -keyalg RSA -keypass hmall123 -keystore hmall.jks -storepass hmall123
