@@ -2,6 +2,7 @@ package config;
 
 import com.hmall.common.utils.UserContext;
 import fallback.ItemClientFallback;
+import fallback.payClientFallback;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
 import org.springframework.context.annotation.Bean;
@@ -27,5 +28,10 @@ public class DefaultFeignConfig {
     @Bean
     public ItemClientFallback itemClientFallback(){
         return new ItemClientFallback();
+    }
+
+    @Bean
+    public payClientFallback payClientFallback(){
+        return new payClientFallback();
     }
 }

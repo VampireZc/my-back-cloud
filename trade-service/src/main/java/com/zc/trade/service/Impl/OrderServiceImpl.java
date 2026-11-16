@@ -2,6 +2,8 @@ package com.zc.trade.service.Impl;
 
 import client.CartClient;
 import client.ItemClient;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.OrderItem;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hmall.common.exception.BadRequestException;
 import com.hmall.common.utils.UserContext;
@@ -15,6 +17,7 @@ import com.zc.trade.service.IOrderService;
 import dto.ItemDTO;
 import dto.OrderDetailDTO;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -33,6 +36,7 @@ import java.util.stream.Collectors;
  */
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements IOrderService {
 
     private final ItemClient itemService;
@@ -91,12 +95,13 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         }
 
         // 发送延时消息
+        log.info("发送延时消息，订单超时未支付，将关闭订单 orderId={}", order.getId());
         rabbitTemplate.convertAndSend(
                 MqConstants.DELAY_EXCHANGE_NAME,
                 MqConstants.DELAY_QUEUE_ROUTING_KEY,
                 order.getId(),
                 message -> {
-                    message.getMessageProperties().setExpiration("5000");
+                    message.getMessageProperties().setDelay(5000);
                     return message;
                 }
 
@@ -117,6 +122,36 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         order.setStatus(2);
         order.setPayTime(LocalDateTime.now());
         updateById(order);
+    }
+
+    @Override
+    public void cancelOrder(Long orderId) {
+        // 根据订单id查询相关的商品恢复库存
+        List<OrderDetail> details = detailService.list(
+                new QueryWrapper<OrderDetail>()
+                        .eq("order_id", orderId)
+        );
+
+        Map<Long, Integer> collect = details.stream().collect(Collectors.toMap(
+                OrderDetail::getItemId,
+                OrderDetail::getNum
+        ));
+        Set<Long> ids = collect.keySet();
+        List<ItemDTO> itemList = itemService.queryItemByIds(ids);
+        for (ItemDTO item: itemList){
+            // 计算需要恢复的库存
+            item.setStock(item.getStock() + collect.get(item.getId()));
+            itemService.updateItem(item);
+        }
+        // 删除这个订单
+        removeById(orderId);
+        detailService.remove(
+                new QueryWrapper<OrderDetail>()
+                        .eq("order_id", orderId)
+        );
+
+        // 清空购物车
+        cartService.deleteCartItemByIds(ids);
     }
 
     private List<OrderDetail> buildDetails(Long orderId, List<ItemDTO> items, Map<Long, Integer> numMap) {

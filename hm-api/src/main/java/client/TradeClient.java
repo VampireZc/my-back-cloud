@@ -14,4 +14,5 @@ public interface TradeClient {
      */
     @PutMapping("/api/orders/{orderId}")
     void markOrderPaySuccess(@PathVariable("orderId") Long orderId);
+
 }

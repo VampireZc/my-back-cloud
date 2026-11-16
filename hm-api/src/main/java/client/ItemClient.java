@@ -28,4 +28,8 @@ public interface ItemClient {
 
     @PutMapping("/api/items/stock/deduct")
     void deductStock(@RequestBody List<OrderDetailDTO> items);
+
+    @PutMapping("/api/items")
+    void updateItem(@RequestBody ItemDTO itemDTO);
+
 }

@@ -13,6 +13,6 @@ public interface PayClient {
      * @param id 业务订单id
      * @return 支付单信息
      */
-    @GetMapping("/pay-orders/biz/{id}")
+    @GetMapping("/api/pay-orders/biz/{id}")
     PayOrderDTO queryPayOrderByBizOrderNo(@PathVariable("id") Long id);
 }

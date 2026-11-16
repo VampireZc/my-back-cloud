@@ -29,6 +29,12 @@ public class ItemClientFallback implements FallbackFactory<ItemClient> {
                 log.info("库存扣减失败，原因：{}", cause.getMessage());
                 throw new BizIllegalException(cause);
             }
+
+            @Override
+            public void updateItem(ItemDTO itemDTO) {
+                log.info("更新商品信息失败，原因：{}", cause.getMessage());
+                throw new BizIllegalException(cause);
+            }
         };
     }
 }
