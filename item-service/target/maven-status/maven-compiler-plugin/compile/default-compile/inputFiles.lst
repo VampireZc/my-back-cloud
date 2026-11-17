@@ -6,4 +6,6 @@
 /Users/zc/my/study/hmall/item-service/src/main/java/com/zc/item/service/IItemService.java
 /Users/zc/my/study/hmall/item-service/src/main/java/com/zc/item/domain/dto/ItemDTO.java
 /Users/zc/my/study/hmall/item-service/src/main/java/com/zc/item/mapper/ItemMapper.java
+/Users/zc/my/study/hmall/item-service/src/main/java/com/zc/item/controller/SearchController.java
+/Users/zc/my/study/hmall/item-service/src/main/java/com/zc/item/domain/dto/ItemDoc.java
 /Users/zc/my/study/hmall/item-service/src/main/java/com/zc/item/domain/po/Item.java
